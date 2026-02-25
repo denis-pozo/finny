@@ -29,6 +29,13 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            implementation("org.apache.commons:commons-csv:1.11.0")
+        }
+        jvmTest.dependencies {
+            implementation(libs.kotlin.test)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
+            implementation("io.mockk:mockk:1.13.13")
+            implementation("junit:junit:4.13.2")
         }
     }
 }
